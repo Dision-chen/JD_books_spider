@@ -23,7 +23,7 @@ SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
 #SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"
 
 ITEM_PIPELINES = {
-    # 'example.pipelines.ExamplePipeline': 300,
+    'jd_book.pipelines.JdBookPipeline': 300,
     'scrapy_redis.pipelines.RedisPipeline': 400,
 }
 
@@ -81,9 +81,7 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'jd_book.pipelines.JdBookPipeline': 300,
-}
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
